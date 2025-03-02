@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benzer Sorun Benzer Çözümler Etkinlikleri</title>
+    <style>
+        /* Blogger için genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+        .instruction {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .problem-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .problem-item {
+            background-color: #fef3c7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .problem-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d1fae5;
+            border-left: 5px solid #10b981;
+            border-radius: 4px;
+            display: none;
+            font-size: 14px;
+        }
+        .activity {
+            margin-bottom: 40px;
+        }
+        /* Responsive tasarım için medya sorguları */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Benzer Sorun Benzer Çözümler Etkinlikleri</h1>
+
+    <!-- Etkinlik 1 -->
+    <div class="container activity" id="activity1">
+        <div class="instruction">
+            <strong>Etkinlik 1:</strong> Aşağıda verilen sorunu inceleyin ve diğer sorunlar arasından benzer olanları seçin.
+        </div>
+        <div class="task">
+            <strong>Sorun:</strong><br>
+            Bir öğrenci, matematik dersinde çarpım tablosunu ezberlemekte zorlanıyor.<br><br>
+            <strong>Diğer Sorunlar:</strong>
+            <ul class="problem-list">
+                <li class="problem-item"><input type="checkbox" id="a1p1"> Bir çocuk, İngilizce kelimeleri ezberlemekte zorlanıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a1p2"> Bir sporcu, antrenman programını düzenli olarak uygulamakta zorlanıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a1p3"> Bir öğrenci, coğrafya dersinde ülkelerin başkentlerini hatırlamakta zorlanıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a1p4"> Bir anne, çocuğunun oyun oynarken odaklanma sorunu yaşadığını görüyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a1p5"> Bir müzisyen, müzik aletindeki parmak hareketlerini ezberlemekte zorlanıyor.</li>
+            </ul>
+        </div>
+        <button onclick="checkAnswersActivity1()">Kontrol Et</button>
+        <div class="result" id="result1">
+            <strong>Sonuç:</strong> <span id="output1"></span>
+        </div>
+    </div>
+
+    <!-- Etkinlik 2 -->
+    <div class="container activity" id="activity2">
+        <div class="instruction">
+            <strong>Etkinlik 2:</strong> Aşağıda verilen sorunu inceleyin ve diğer sorunlar arasından benzer olanları seçin.
+        </div>
+        <div class="task">
+            <strong>Sorun:</strong><br>
+            Arkadaşından ödünç aldığın bir kitabı kaybettin.<br><br>
+            <strong>Diğer Sorunlar:</strong>
+            <ul class="problem-list">
+                <li class="problem-item"><input type="checkbox" id="a2p1"> Marketten aldığın bir ürünü eve getirirken düşürdün.</li>
+                <li class="problem-item"><input type="checkbox" id="a2p2"> Kardeşinin oyuncağını kaybettin.</li>
+                <li class="problem-item"><input type="checkbox" id="a2p3"> Yemek yaparken tuzu fazla koydun.</li>
+                <li class="problem-item"><input type="checkbox" id="a2p4"> Parkta bulduğun bir cüzdanın sahibini bulamadın.</li>
+                <li class="problem-item"><input type="checkbox" id="a2p5"> Arkadaşın doğum gününü kutlamayı unuttun.</li>
+            </ul>
+        </div>
+        <button onclick="checkAnswersActivity2()">Kontrol Et</button>
+        <div class="result" id="result2">
+            <strong>Sonuç:</strong> <span id="output2"></span>
+        </div>
+    </div>
+
+    <!-- Etkinlik 3 -->
+    <div class="container activity" id="activity3">
+        <div class="instruction">
+            <strong>Etkinlik 3:</strong> Aşağıda verilen sorunu inceleyin ve diğer sorunlar arasından benzer olanları seçin.
+        </div>
+        <div class="task">
+            <strong>Sorun:</strong><br>
+            Bilgisayarın açma tuşuna bastınız ama bilgisayar açılmadı.<br><br>
+            <strong>Diğer Sorunlar:</strong>
+            <ul class="problem-list">
+                <li class="problem-item"><input type="checkbox" id="a3p1"> Televizyonun uzaktan kumandası çalışmıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a3p2"> Lambayı yaktınız ama ışık yanmıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a3p3"> Arkadaşınız doğum gününüzü unutmuş.</li>
+                <li class="problem-item"><input type="checkbox" id="a3p4"> Arabanızın motoru çalıştırmıyor.</li>
+                <li class="problem-item"><input type="checkbox" id="a3p5"> Yemek yaparken tuz eklemeyi unutmuşsunuz.</li>
+            </ul>
+        </div>
+        <button onclick="checkAnswersActivity3()">Kontrol Et</button>
+        <div class="result" id="result3">
+            <strong>Sonuç:</strong> <span id="output3"></span>
+        </div>
+    </div>
+
+    <script>
+        // Etkinlik 1 Kontrol Fonksiyonu
+        function checkAnswersActivity1() {
+            const correctAnswers = ["a1p1", "a1p3", "a1p5"];
+            let selectedAnswers = [];
+            let resultText = "";
+
+            document.querySelectorAll('#activity1 .problem-item input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedAnswers.push(checkbox.id);
+                }
+            });
+
+            if (arraysEqual(selectedAnswers.sort(), correctAnswers.sort())) {
+                resultText = "Tebrikler! Doğru cevapları buldunuz.";
+            } else {
+                resultText = "Maalesef yanlış seçimler yaptınız. Lütfen tekrar deneyin.";
+            }
+
+            document.getElementById('output1').textContent = resultText;
+            document.getElementById('result1').style.display = 'block';
+        }
+
+        // Etkinlik 2 Kontrol Fonksiyonu
+        function checkAnswersActivity2() {
+            const correctAnswers = ["a2p1", "a2p2", "a2p4"];
+            let selectedAnswers = [];
+            let resultText = "";
+
+            document.querySelectorAll('#activity2 .problem-item input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedAnswers.push(checkbox.id);
+                }
+            });
+
+            if (arraysEqual(selectedAnswers.sort(), correctAnswers.sort())) {
+                resultText = "Tebrikler! Doğru cevapları buldunuz.";
+            } else {
+                resultText = "Maalesef yanlış seçimler yaptınız. Lütfen tekrar deneyin.";
+            }
+
+            document.getElementById('output2').textContent = resultText;
+            document.getElementById('result2').style.display = 'block';
+        }
+
+        // Etkinlik 3 Kontrol Fonksiyonu
+        function checkAnswersActivity3() {
+            const correctAnswers = ["a3p1", "a3p2", "a3p4"];
+            let selectedAnswers = [];
+            let resultText = "";
+
+            document.querySelectorAll('#activity3 .problem-item input[type="checkbox"]').forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedAnswers.push(checkbox.id);
+                }
+            });
+
+            if (arraysEqual(selectedAnswers.sort(), correctAnswers.sort())) {
+                resultText = "Tebrikler! Doğru cevapları buldunuz.";
+            } else {
+                resultText = "Maalesef yanlış seçimler yaptınız. Lütfen tekrar deneyin.";
+            }
+
+            document.getElementById('output3').textContent = resultText;
+            document.getElementById('result3').style.display = 'block';
+        }
+
+        // İki dizinin eşit olup olmadığını kontrol eden yardımcı fonksiyon
+        function arraysEqual(a, b) {
+            return a.length === b.length && a.every((value, index) => value === b[index]);
+        }
+    </script>
+</body>
+</html>
